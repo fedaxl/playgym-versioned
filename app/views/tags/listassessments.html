@@ -1,0 +1,28 @@
+<table class="ui fixed table">
+  <thead>
+    <tr>
+      <th>Assessment</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    #{list items:_report.assessments, as:'assessment'}
+      <tr>
+        <td>
+        ${assessment.assessmentid}
+        </td>
+        <td>
+          ${assessment.lastname}
+        </td>
+        <td>        
+          ${assessment.firstname}
+        </td>      
+         <td>
+            <a href="/reports/${_report.id}/deleteAssessment/${assessment.id}" class="ui tiny red button">Delete Assessment</a>
+          </td>         
+      </tr>
+    #{/list}
+  </tbody>
+</table>
