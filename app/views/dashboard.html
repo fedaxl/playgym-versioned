@@ -1,8 +1,0 @@
-#{extends 'main.html' /}
-#{set title:'Dashboard' /}
-#{menu id:"dashboard"/}
-<section class="ui segment">
-#{member-profile-banner member:member, memberReports:memberReports/}
- #{addassessment/}
- #{assessment-table assessments:assessments, member:member/}
-</section>
